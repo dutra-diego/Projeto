@@ -1,145 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
-    <script src="./index.js" defer></script>
- 
-</head>
-<body>
-    <header >
-        <div class="header">
-            <h2>
-                My company
-            </h2>
-            <div class="">
-                
-                <label for="productName">
-                    Busque seu produto
-                </label>
-                <div class="search">
-                <input  placeholder="Digite aqui o que você procura"type="text" id="search" name="search" onkeyup="getSearch()">
-                <button type="submit">
-                    <img src="./icons/search-svgrepo-com.svg" alt=""/>
-                </button>
-            </div>
-            </div>
-
-            <button class="market">
-                <img src="./icons/market-purchase-svgrepo-com.svg" alt="">
+    <script type="module" src="./filters.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h2>My company</h2>
+        <div class="">
+          <label for="productName"> Busque seu produto </label>
+          <div class="search">
+            <input
+              placeholder="Digite aqui o que você procura"
+              type="text"
+              id="search"
+              name="search"
+            />
+            <button type="submit">
+              <img src="./icons/search-svgrepo-com.svg" alt="" />
             </button>
+          </div>
         </div>
+
+        <button class="market">
+          <img src="./icons/market-purchase-svgrepo-com.svg" alt="" />
+        </button>
+      </div>
     </header>
 
     <main>
-        <div class="content">
-        
-              <div >
-                    <div class="menu">
-                        <div>
-                            <label for="sale"><h2>Promoções</h2></label>
-                            <input type="checkbox" name="sale" id="sale" onclick="verifyChange()">
-                        </div>
-                        <div>
-                            <label for="freeship"><h2>Frete grátis</h2></label>
-                            <input type="checkbox" name="freeship" id="freeship" onclick="verifyChange()">
-                        </div>
-                   </div> 
-                   
-                    <div class="brand">
-                        <p class="filter">Marcas</p>
-                        <div class="brandinput" >
-                           <div>
-                            <input type="checkbox" name="evga" id="evga" onclick="verifyChange()">
-                            <label for="evga">Evga</label>
-                           </div>
-                           <div>
-                            <input type="checkbox" name="redgragon" id="redgragon" onclick="verifyChange()">
-                            <label for="redgragon">Redgragon</label>
-                           </div>
-                            <div>
-                                <input type="checkbox" name="hyperfury" id="hyperfury" onclick="verifyChange()">
-                                <label for="hyperfury">Hyper fury</label>
-                            </div>
-                           
-                            <div >
-                                <input type="checkbox" name="other" id="other" onclick="verifyChange()">
-                                <label for="other">Other</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="redragon" id="redragon" onclick="verifyChange()">
-                                <label for="redragon">Redragon</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="msi" id="msi" onclick="verifyChange()">
-                                <label for="msi">Msi</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="corsair" id="corsair" onclick="verifyChange()">
-                                <label for="corsair">Corsair</label>
-                            </div>
-                        </div>
-                   </div>
+      <div class="content">
+        <div>
+          <div class="menu">
+            <div>
+              <label for="sale"><h2>Promoções</h2></label>
+              <input type="checkbox" name="sale" id="sale" />
+            </div>
+            <div>
+              <label for="freeship"><h2>Frete grátis</h2></label>
+              <input type="checkbox" name="freeship" id="freeship" />
+            </div>
+          </div>
 
-                   <div class="condition">
-                        <p class="filter">Condição</p>
-                        <div class="conditioninput">
-                            <div>
-                                <input type="checkbox" name="new" id="new" onclick="verifyChange()">
-                            <label for="new">New</label>
-                            </div>
-                            <div>
-                            <input type="checkbox" name="semi" id="semi" onclick="verifyChange()">
-                            <label for="semi">Semi</label>
-                            </div>   
-                        </div>
-                    </div>
+          <div class="brand">
+            <p class="filter">Marcas</p>
+            <div class="brandinput">
+              <div>
+                <input type="checkbox" name="evga" id="evga" />
+                <label for="evga">Evga</label>
+              </div>
+              <div>
+                <input type="checkbox" name="redgragon" id="redgragon" />
+                <label for="redgragon">Redgragon</label>
+              </div>
+              <div>
+                <input type="checkbox" name="hyperfury" id="hyperfury" />
+                <label for="hyperfury">Hyper fury</label>
+              </div>
 
-                        
-                    <div class="category">
-                        <p class="filter">Categorias</p>
-                        <div class="categoryinput">
-                            <div>
-                                <input  type="checkbox" name="graphiccard" id="graphiccard" onclick="verifyChange()">
-                            <label for="graphiccard">Placa de vídeo</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="keyboard" id="keyboard" onclick="verifyChange()">
-                            <label for="keyboard">Teclado</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="headset" id="headset" onclick="verifyChange()">
-                            <label for="headset">Headset</label>
-                            </div>
-                           <div>
-                            <input type="checkbox" name="game" id="game" onclick="verifyChange()">
-                            <label for="game">Jogo</label>
-                           </div>
-                                 
-                        </div>
-                    </div>
-                    
-                    <div class="price">
-                        <p class="filter">Preço</p>
-                        <div class="priceinput">
-                            <input type="number" placeholder="0" name="priceMin" id="priceMin" onchange="verifyMinValueCheckbox()" >
-                            <span>à</span>
-                            <input type="number" placeholder="2000" name="priceMax" id="priceMax" onchange="verifyMaxValueCheckbox()" >
+              <div>
+                <input type="checkbox" name="other" id="other" />
+                <label for="other">Other</label>
+              </div>
+              <div>
+                <input type="checkbox" name="redragon" id="redragon" />
+                <label for="redragon">Redragon</label>
+              </div>
+              <div>
+                <input type="checkbox" name="msi" id="msi" />
+                <label for="msi">Msi</label>
+              </div>
+              <div>
+                <input type="checkbox" name="corsair" id="corsair" />
+                <label for="corsair">Corsair</label>
+              </div>
+            </div>
+          </div>
 
-                            
-                        </div>
-                    </div>
-                </div>
-               <div class="items" id="items" >
-             
-               
-               </div>
-           
+          <div class="condition">
+            <p class="filter">Condição</p>
+            <div class="conditioninput">
+              <div>
+                <input type="checkbox" name="new" id="new" />
+                <label for="new">New</label>
+              </div>
+              <div>
+                <input type="checkbox" name="semi" id="semi" />
+                <label for="semi">Semi</label>
+              </div>
+            </div>
+          </div>
 
+          <div class="category">
+            <p class="filter">Categorias</p>
+            <div class="categoryinput">
+              <div>
+                <input type="checkbox" name="graphiccard" id="graphiccard" />
+                <label for="graphiccard">Placa de vídeo</label>
+              </div>
+              <div>
+                <input type="checkbox" name="keyboard" id="keyboard" />
+                <label for="keyboard">Teclado</label>
+              </div>
+              <div>
+                <input type="checkbox" name="headset" id="headset" />
+                <label for="headset">Headset</label>
+              </div>
+              <div>
+                <input type="checkbox" name="game" id="game" />
+                <label for="game">Jogo</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="price">
+            <p class="filter">Preço</p>
+            <div class="priceinput">
+              <input
+                type="number"
+                placeholder="0"
+                name="priceMin"
+                id="priceMin"
+              />
+              <span>à</span>
+              <input
+                type="number"
+                placeholder="2000"
+                name="priceMax"
+                id="priceMax"
+              />
+            </div>
+          </div>
         </div>
+        <div class="items" id="items"></div>
+      </div>
     </main>
-   
-</body>
+  </body>
 </html>
